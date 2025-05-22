@@ -4,7 +4,6 @@ import IconButton from "@/components/ui/icon-button";
 import useCart from "@/hooks/use-cart";
 import { X } from "lucide-react";
 import Image from "next/image";
-import { toast } from "react-hot-toast";
 import { Product } from "@/types";
 
 interface CartItemProps {
