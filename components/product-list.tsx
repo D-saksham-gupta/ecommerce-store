@@ -1,12 +1,12 @@
 // components/ProductList.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Product } from "@/types";
 import NoResults from "./ui/no-results";
 import ProductCard from "@/components/ui/product-card";
 // IMPORTANT: If getProducts is server-only, replace with a client fetch to your API route.
-import getProducts from "@/actions/get-products";
+//import getProducts from "@/actions/get-products";
 
 interface ProductListProps {
   popular: Product[];
@@ -16,7 +16,7 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ popular, items }) => {
   const [filter, setFilter] = useState(false);
   //const [featured, setFeatured] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
   //const [error, setError] = useState<string | null>(null);
 
   const listToRender = filter ? popular : items;
@@ -50,7 +50,7 @@ const ProductList: React.FC<ProductListProps> = ({ popular, items }) => {
         </div>
       </div>
 
-      {filter && loading && (
+      {filter && (
         <p className="text-center text-rose-500 text-2xl">
           Loading popular products...
         </p>
