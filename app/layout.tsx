@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
-import Navbar from "@/components/Navbar";
+//import Navbar from "@/components/Navbar";
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
 

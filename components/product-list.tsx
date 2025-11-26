@@ -15,32 +15,9 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ popular, items }) => {
   const [filter, setFilter] = useState(false);
-  const [featured, setFeatured] = useState<Product[]>([]);
+  //const [featured, setFeatured] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let mounted = true;
-    async function loadFeatured() {
-      try {
-        setLoading(true);
-        // If getProducts is server-only, call a client API instead:
-        // const res = await fetch('/api/products?isFeatured=true');
-        // const data = await res.json();
-        const data = await getProducts({ isFeatured: true });
-        if (mounted) setFeatured(data);
-      } catch (err: any) {
-        if (mounted) setError(err?.message ?? "Failed to load");
-      } finally {
-        if (mounted) setLoading(false);
-      }
-    }
-
-    loadFeatured();
-    return () => {
-      mounted = false;
-    };
-  }, []);
+  //const [error, setError] = useState<string | null>(null);
 
   const listToRender = filter ? popular : items;
 
