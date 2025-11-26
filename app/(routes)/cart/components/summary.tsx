@@ -28,14 +28,35 @@ const Summary = () => {
   }, [searchParams, removeAll]);
 
   const onCheckout = async () => {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
-      {
-        productIds: items.map((item) => item.id),
-      }
-    );
+    try {
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
+        {
+          productIds: items.map((item) => item.id),
+        }
+      );
 
-    window.location = response.data.url;
+      window.location = response.data.url;
+    } catch (error) {
+      toast.error("Checkout failed. Please try again.");
+      console.error(error);
+    }
+  };
+  const onCheckout2 = async () => {
+    try {
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/codcheckout`,
+        {
+          productIds: items.map((item) => item.id),
+        }
+      );
+      console.log(response);
+      removeAll();
+      toast.success(`${response.data.message}`);
+    } catch (error) {
+      toast.error("Checkout failed. Please try again.");
+      console.error(error);
+    }
   };
 
   return (
@@ -48,9 +69,14 @@ const Summary = () => {
         </div>
       </div>
       {items.length > 0 && (
-        <Button className="w-full mt-6" onClick={onCheckout}>
-          Checkout
-        </Button>
+        <div>
+          <Button className="w-full mt-6" onClick={onCheckout}>
+            Checkout
+          </Button>
+          <Button className="w-full mt-6" onClick={onCheckout2}>
+            Pay at Shop
+          </Button>
+        </div>
       )}
     </div>
   );
