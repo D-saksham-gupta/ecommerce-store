@@ -1,15 +1,7 @@
 "use client";
 
 import { Category } from "@/types";
-import {
-  FileText,
-  Grid,
-  Home,
-  MessageSquare,
-  Phone,
-  Menu,
-  X,
-} from "lucide-react";
+import { Grid, Home, MessageSquare, Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
