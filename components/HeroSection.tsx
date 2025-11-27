@@ -23,14 +23,10 @@ export default function HeroSection() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-          <div className="w-8 h-1 bg-rose-500 rounded-full"></div>
-          <div className="w-8 h-1 bg-gray-300 rounded-full"></div>
-        </div>
       </div>
 
       <div className="space-y-6">
-        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 h-full flex flex-col justify-between">
+        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 flex flex-col justify-between">
           <div>
             <p className="text-rose-500 text-xs font-medium mb-2">
               Trend reads
@@ -40,7 +36,7 @@ export default function HeroSection() {
             </h3>
             <p className="text-xl font-bold text-gray-900">C Arts</p>
           </div>
-          <div className="mt-4">
+          <div className="mt-1">
             <img
               src="https://images.pexels.com/photos/6068955/pexels-photo-6068955.jpeg?auto=compress&cs=tinysrgb&w=400"
               alt="Modern Art"

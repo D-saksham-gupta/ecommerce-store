@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Category } from "../types";
 import { useRouter } from "next/navigation";
 
@@ -16,7 +17,8 @@ export default function CategoryCard({ category }: CategoryCardProps) {
       className="bg-white rounded-lg p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow cursor-pointer group"
     >
       <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
-        <img src={imageUrl} alt={category.name} />
+        {/* <img src={imageUrl} alt={category.name} /> */}
+        <Image src={imageUrl} alt="img" width={50} height={50} />
       </div>
       {/* <h3 className="text-sm font-medium text-gray-900 mb-1 text-center">
         {category.name}

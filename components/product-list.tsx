@@ -50,11 +50,6 @@ const ProductList: React.FC<ProductListProps> = ({ popular, items }) => {
         </div>
       </div>
 
-      {filter && (
-        <p className="text-center text-rose-500 text-2xl">
-          Loading popular products...
-        </p>
-      )}
       {/* {error && <p className="text-sm text-red-500">{error}</p>} */}
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

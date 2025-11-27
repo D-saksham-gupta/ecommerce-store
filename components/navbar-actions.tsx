@@ -30,9 +30,9 @@ const NavbarActions = () => {
     //   </Button>
     // </div>
 
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="px-6 py-4 flex items-center justify-between">
-        <div className="flex-1 max-w-md">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-49">
+      <div className="px-6 py-4 flex items-center justify-end">
+        <div className="flex-1 max-w-md ml-8">
           <div className="relative">
             <Search
               className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
@@ -47,7 +47,7 @@ const NavbarActions = () => {
         </div>
 
         <div className="flex items-center gap-6 ml-6">
-          <div className="flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             <img
               src="https://flagcdn.com/w40/gb.png"
               alt="English"
@@ -56,7 +56,7 @@ const NavbarActions = () => {
             <span className="text-sm">English</span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             <span className="text-sm">USD</span>
           </div>
 
