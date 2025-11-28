@@ -4,8 +4,8 @@ import getProducts from "@/actions/get-products";
 //import Billboard from "@/components/billboard";
 import CategoriesSection from "@/components/CategoriesSection";
 import HeroSection from "@/components/HeroSection";
-import MainNav from "@/components/main-nav";
-import NavbarActions from "@/components/navbar-actions";
+//import MainNav from "@/components/main-nav";
+//import NavbarActions from "@/components/navbar-actions";
 import ProductList from "@/components/product-list";
 //import Container from "@/components/ui/container";
 
@@ -27,9 +27,9 @@ const HomePage = async () => {
     // </Container>
 
     <div className="min-h-screen bg-gray-50 flex">
-      <MainNav data={categories} />
+      {/* <MainNav data={categories} /> */}
       <div className="flex-1 flex flex-col">
-        <NavbarActions />
+        {/* <NavbarActions /> */}
         <main className="flex-1 p-8">
           <HeroSection />
           <CategoriesSection data={categories} />

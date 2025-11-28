@@ -52,7 +52,10 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
         `}
       >
         <div className="p-6">
-          <div className="flex gap-2 mb-8 items-center">
+          <div
+            onClick={() => setIsOpen(false)}
+            className="flex gap-2 mb-8 items-center"
+          >
             <img
               width={50}
               className="rounded-full h-[50px]"
@@ -65,23 +68,35 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           </div>
 
           <nav className="space-y-1 mb-8">
-            <button className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700">
+            <Link
+              href={"/"}
+              onClick={() => setIsOpen(false)}
+              className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700"
+            >
               <Home size={20} />
               <span>Home</span>
-            </button>
-            <button className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700">
+            </Link>
+            <Link
+              href={"/about"}
+              onClick={() => setIsOpen(false)}
+              className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700"
+            >
               <Grid size={20} />
               <span>Our Story</span>
-            </button>
+            </Link>
 
             <button className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700">
               <MessageSquare size={20} />
               <span>Blog</span>
             </button>
-            <button className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700">
+            <Link
+              href={"/contact"}
+              onClick={() => setIsOpen(false)}
+              className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-700"
+            >
               <Phone size={20} />
               <span>Contact</span>
-            </button>
+            </Link>
           </nav>
 
           <div className="border-t border-gray-200 pt-6">
