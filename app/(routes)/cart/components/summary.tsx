@@ -76,12 +76,12 @@ const Summary = () => {
       </div>
       {items.length > 0 && (
         <div>
-          <Button className="w-full mt-6" onClick={onCheckout}>
+          <Button disabled={loading1} className="w-full mt-6" onClick={onCheckout}>
             {loading1
               ? "Redirecting you to the payment gateway..."
               : "Checkout"}
           </Button>
-          <Button className="w-full mt-6" onClick={onCheckout2}>
+          <Button disabled={loading2} className="w-full mt-6" onClick={onCheckout2}>
             {loading2 ? "Placing your order..." : "Pay at Shop"}
           </Button>
         </div>
