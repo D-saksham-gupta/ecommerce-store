@@ -13,9 +13,11 @@ export default function Loading() {
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
             {/* Filters skeleton */}
             <div className="hidden lg:block">
-              <div className="mb-4 h-8 w-24 animate-pulse rounded bg-gray-400" />
-              <div className="mb-2 h-8 w-32 animate-pulse rounded bg-gray-400" />
-              <div className="mb-2 h-8 w-28 animate-pulse rounded bg-gray-400" />
+              <div className="mb-4 h-8 w-29 animate-pulse rounded bg-gray-400">
+                <div className="mb-4 h-8 w-24 animate-pulse rounded bg-gray-400" />
+                <div className="mb-2 h-8 w-32 animate-pulse rounded bg-gray-400" />
+                <div className="mb-2 h-8 w-28 animate-pulse rounded bg-gray-400" />
+              </div>
             </div>
 
             {/* Products skeleton */}

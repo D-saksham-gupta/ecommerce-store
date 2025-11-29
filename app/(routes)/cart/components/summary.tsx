@@ -5,11 +5,13 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 
 const Summary = () => {
   const searchParams = useSearchParams();
+  const [loading1, setLoading1] = useState(false);
+  const [loading2, setLoading2] = useState(false);
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
   const totalPrice = items.reduce(
@@ -29,6 +31,7 @@ const Summary = () => {
 
   const onCheckout = async () => {
     try {
+      setLoading1(true);
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
         {
@@ -37,6 +40,7 @@ const Summary = () => {
       );
 
       window.location = response.data.url;
+      setLoading1(false);
     } catch (error) {
       toast.error("Checkout failed. Please try again.");
       console.error(error);
@@ -44,6 +48,7 @@ const Summary = () => {
   };
   const onCheckout2 = async () => {
     try {
+      setLoading2(true);
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/codcheckout`,
         {
@@ -53,6 +58,7 @@ const Summary = () => {
       console.log(response);
       removeAll();
       toast.success(`${response.data.message}`);
+      setLoading2(false);
     } catch (error) {
       toast.error("Checkout failed. Please try again.");
       console.error(error);
@@ -71,10 +77,12 @@ const Summary = () => {
       {items.length > 0 && (
         <div>
           <Button className="w-full mt-6" onClick={onCheckout}>
-            Checkout
+            {loading1
+              ? "Redirecting you to the payment gateway..."
+              : "Checkout"}
           </Button>
           <Button className="w-full mt-6" onClick={onCheckout2}>
-            Pay at Shop
+            {loading2 ? "Placing your order..." : "Pay at Shop"}
           </Button>
         </div>
       )}

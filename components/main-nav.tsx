@@ -25,7 +25,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   };
 
   return (
-    <div className="z-50">
+    <div className="z-50 fixed">
       <button
         onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-2 z-50 p-2 text-rose-500 rounded-lg shadow-lg hover:bg-rose-600 transition-colors"

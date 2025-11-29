@@ -4,6 +4,8 @@ import getProducts from "@/actions/get-products";
 //import Billboard from "@/components/billboard";
 import CategoriesSection from "@/components/CategoriesSection";
 import HeroSection from "@/components/HeroSection";
+import MainNav from "@/components/main-nav";
+import NavbarActions from "@/components/navbar-actions";
 //import MainNav from "@/components/main-nav";
 //import NavbarActions from "@/components/navbar-actions";
 import ProductList from "@/components/product-list";
@@ -17,20 +19,11 @@ const HomePage = async () => {
   const fproducts = await getProducts({ isFeatured: true });
   const categories = await getCategories();
   return (
-    // <Container>
-    //   <div className="space-y-10 pb-10 ">
-    //     {/* <Billboard data={billboard} /> */}
-    //     <div className="flex flex-col gap-y-8 px-4 lg:px-8 sm:px-6">
-    //       <ProductList title="Spotlight Items" items={products} />
-    //     </div>
-    //   </div>
-    // </Container>
-
-    <div className="min-h-screen bg-gray-50 flex">
-      {/* <MainNav data={categories} /> */}
+    <div className="min-h-screen bg-gray-50 flex sticky">
+      <MainNav data={categories} />
       <div className="flex-1 flex flex-col">
-        {/* <NavbarActions /> */}
-        <main className="flex-1 p-8">
+        <NavbarActions />
+        <main className="flex-1 p-8 lg:ml-64">
           <HeroSection />
           <CategoriesSection data={categories} />
           <ProductList popular={fproducts} items={products} />

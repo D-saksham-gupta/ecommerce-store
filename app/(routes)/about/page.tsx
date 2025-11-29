@@ -31,7 +31,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.pexels.com/photos/3622619/pexels-photo-3622619.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/8234808/pexels-photo-8234808.jpeg"
                 alt="Our Story"
                 className="rounded-2xl shadow-2xl"
               />
@@ -44,7 +44,7 @@ export default function About() {
                 Started with a Simple Dream
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                In 2015, our founder Sarah believed that fashion should be
+                In 2015, our founder Sumedha believed that fashion should be
                 accessible, sustainable, and meaningful. What started as a small
                 workshop with just three sewing machines has grown into a global
                 movement of conscious consumers who care about where their

@@ -19,7 +19,7 @@ export default function HeroSection() {
       highlight: "Elegance",
       subtitle: "latest Creations",
       image:
-        "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://i.pinimg.com/736x/b1/03/23/b10323993a70f08357aed56266c7a083.jpg",
       gradient: "from-slate-50 via-rose-50 to-pink-100",
       textColor: "text-gray-900",
     },
@@ -29,7 +29,7 @@ export default function HeroSection() {
       highlight: "Edition",
       subtitle: "Exclusive Designs",
       image:
-        "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://i.pinimg.com/474x/f7/d6/dc/f7d6dc5a1cacc709b8be40c7b72eac7f.jpg",
       gradient: "from-amber-50 via-orange-50 to-rose-100",
       textColor: "text-gray-900",
     },
@@ -41,7 +41,7 @@ export default function HeroSection() {
       title: "Modern",
       subtitle: "Minimalist Style",
       image:
-        "https://images.pexels.com/photos/6068955/pexels-photo-6068955.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://i.pinimg.com/474x/23/d2/ac/23d2ace0bb5556ac3765429c6aac61ab.jpg",
       gradient: "from-emerald-50 to-teal-100",
     },
     {
@@ -49,7 +49,7 @@ export default function HeroSection() {
       title: "Timeless",
       subtitle: "Classics",
       image:
-        "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "https://i.pinimg.com/736x/2e/fe/49/2efe49956b47cb6127bc4e8c40f31c87.jpg",
       gradient: "from-cyan-50 to-blue-100",
     },
   ];
